@@ -15,14 +15,22 @@
 
 # DATABASE STRUCTURE
 
-### Events
+### Events (created)
 | id     | user_id    | amount      | event_name       |
 |--------|------------|-------------|------------------|
 |1       |harry       | 100         | WDI HK 7         |
 
 
-### Transactions
+### Transactions (created)
 |id     | event_id    | transaction_name | transaction_type | payer      | payee    | amount    |
 |-------|-------------|------------------|------------------|------------|----------|-----------|
 |1      |1            |friday drinks     | expense          | harry      | dimple   | $100      |
 |2      |nil          |nil               | payment          | dimple     | fer      | $50       |
+
+### Users (tbc)
+|id     | username    | email            | password         |
+|-------|-------------|------------------|------------------|
+|1      |dimple       |dimple@dimple.com |sdfawefaweosif    |
+
+
+### Sessions (??)
