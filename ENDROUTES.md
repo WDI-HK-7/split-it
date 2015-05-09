@@ -9,8 +9,8 @@
 | session       | DELETE         | delete a session     | session#destroy     | on success: true, else false         |
 | transactions  | GET            | get all transactions | transactions#index  | renders transactions, else false |
 | transactions  | POST           | create a transaction | transactions#create | on success: true, else false         |
-| transaction   | PUT/PATCH      | updates a transaction| transactions#update | on success: true, else false         |
-| transaction   | DELETE         | deletes a transaction| transactions#delete | on success: true, else false         |
+| transaction   | PUT/PATCH      | update a transaction| transactions#update | on success: true, else false         |
+| transaction   | DELETE         | delete a transaction| transactions#delete | on success: true, else false         |
 
 
 # DATABASE STRUCTURE
