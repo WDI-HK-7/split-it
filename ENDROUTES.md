@@ -30,7 +30,7 @@
 ### Users (tbc)
 |id     | username    | email            | password         |
 |-------|-------------|------------------|------------------|
-|1      |dimple       |dimple@dimple.com |sdfawefaweosif    |
+|1      |dimple       |dy@dydydy.com     |3&63f#48DO2aw*(32r|
 
 
 ### Sessions (??)
