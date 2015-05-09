@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Split It is an app that will help you keep track of shared expenses with family and friends with ease.
+Never forget another who-owes-what again!
 
-Things you may want to cover:
+To-Do:
+* Wire Frame
 
-* Ruby version
+* Create new rails app with databases (structure as discussed on Friday)
 
-* System dependencies
+* List out necessary end points and routes
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
