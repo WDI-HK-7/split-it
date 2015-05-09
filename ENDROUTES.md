@@ -14,3 +14,15 @@
 
 
 # DATABASE STRUCTURE
+
+### Events
+| id     | user_id    | amount      | event_name       |
+|--------|------------|-------------|------------------|
+|1       |harry       | 100         | WDI HK 7         |
+
+
+### Transactions
+|id     | event_id    | transaction_name | transaction_type | payer      | payee    | amount    |
+|-------|-------------|------------------|------------------|------------|----------|-----------|
+|1      |1            |friday drinks     | expense          | harry      | dimple   | $100      |
+|2      |nil          |nil               | payment          | dimple     | fer      | $50       |
