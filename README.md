@@ -1,4 +1,4 @@
-# README
+## README
 
 Split It is an app that will help you keep track of shared expenses with family and friends with ease.
 Never forget another who-owes-what again!
@@ -6,8 +6,7 @@ Never forget another who-owes-what again!
 
 To-Do:
 
-
-* ~~Wire Frame.~~
+* ~~Wire Frame~~
 
 * ~~Create new rails app with databases (structure as discussed on Friday)~~
 
