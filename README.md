@@ -6,7 +6,7 @@ Never forget another who-owes-what again!
 
 To-Do:
 
-* ~~Wire Frame~~
+* ~~Wire Frame~~ (https://goo.gl/4d3NKD)
 
 * ~~Create new rails app with databases (structure as discussed on Friday)~~
 
