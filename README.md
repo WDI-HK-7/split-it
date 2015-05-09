@@ -6,11 +6,11 @@ Never forget another who-owes-what again!
 
 To-Do:
 
-* ~~Wire Frame~~ (https://goo.gl/4d3NKD)
+* ~~Wire Frame~~ (https://goo.gl/4d3NKD) (to be reviewed)
 
 * ~~Create new rails app with events & transactions databases (structure as discussed on Friday)~~
 
 * ~~Add Harry & Fer as collaborators~~
 
-* List out necessary end points and routes
+* List out necessary end points and routes (to be reviewed)
 
