@@ -12,5 +12,5 @@ To-Do:
 
 * ~~Add Harry & Fer as collaborators~~
 
-* List out necessary end points and routes (to be reviewed)
+* List out necessary end points and routes (@ENDROUTES.md --> to be reviewed)
 
