@@ -16,21 +16,24 @@
 # DATABASE STRUCTURE
 
 ### Events (created)
-| id     | user_id    | amount      | event_name       |
-|--------|------------|-------------|------------------|
-|1       |harry       | 100         | WDI HK 7         |
+| id     | event_name       |
+|--------|------------------|
+|1       | WDI HK 7         |
 
 
 ### Transactions (created)
-|id     | event_id    | transaction_name | transaction_type | payer      | payee    | amount    |
-|-------|-------------|------------------|------------------|------------|----------|-----------|
-|1      |1            |friday drinks     | expense          | harry      | dimple   | $100      |
-|2      |nil          |nil               | payment          | dimple     | fer      | $50       |
+|id     | event_id    | transaction_name | transaction_type | payer        |payee        | amount    |
+|-------|-------------|------------------|------------------|--------------|-------------|-----------|
+|1      |1            |friday drinks     | expense          | harrys_id    | dimples_id  | $100      |
+|2      |1            |salad lunch       | expense          | dimples_id   | harrys_id   | $10       |
+|3      |nil          |nil               | payment          | fers_id      | dimples_id  | $50       |
 
 ### Users (tbc)
-|id     | username    | email            | password         |
-|-------|-------------|------------------|------------------|
-|1      |dimple       |dy@dydydy.com     |3&63f#48DO2aw*(32r|
+|id             | username    | email            | password         |
+|---------------|-------------|------------------|------------------|
+|dimples_id     |dimple       |dy@dydydy.com     |3&63f#48DO2aw*(32r|
+|harrys_id      |harry        |harry@hahaha.com  |*(3wri3rpoifSDif3r|
+|fers_id        |f3r          |f3r@456.com       |(*F923rijpoeFDsfda|
 
 
 ### Sessions (??)
