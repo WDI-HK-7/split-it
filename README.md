@@ -8,7 +8,7 @@ To-Do:
 
 * ~~Wire Frame~~ (https://goo.gl/4d3NKD) (to be reviewed)
 
-* ~~Create new rails app with events & transactions databases (structure as discussed on Friday)~~
+* ~~Create new rails app with events & transactions databases~~ (to be reviewed)
 
 * ~~Add Harry & Fer as collaborators~~
 
