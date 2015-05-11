@@ -15,18 +15,27 @@
 
 # DATABASE STRUCTURE
 
-### Events (created)
+### Events
 | id     | event_name       |
 |--------|------------------|
 |1       | WDI HK 7         |
 
 
-### Transactions (created)
-|id     | event_id    | transaction_name | transaction_type | payer        |payee        | amount    |
-|-------|-------------|------------------|------------------|--------------|-------------|-----------|
-|1      |1            |friday drinks     | expense          | harrys_id    | dimples_id  | $100      |
-|2      |1            |salad lunch       | expense          | dimples_id   | harrys_id   | $10       |
-|3      |nil          |nil               | payment          | fers_id      | dimples_id  | $50       |
+### Activities
+|id     | event_id    | activity_name    | total_amount    |
+|-------|-------------|------------------|-----------------|
+|1      |1            |friday drinks     | $200            |
+|2      |1            |salad lunch       | $110            |
+|3      |nil          |nil               | $50             |
+
+
+### Transactions
+|id     | activity_id | transaction_type | payer        |payee        | amount    |
+|-------|-------------|------------------|--------------|-------------|-----------|
+|1      | 1           | expense          | harrys_id    | dimples_id  | $100      |
+|2      | 1           | expense          | harrys_id    | michaels_id | $20       |
+|3      | 2           | expense          | dimples_id   | harrys_id   | $10       |
+|4      | -           | payment          | fers_id      | dimples_id  | $50       |
 
 ### Users (tbc)
 |id             | username    | email            | password         |
