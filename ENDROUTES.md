@@ -15,21 +15,21 @@
 
 # DATABASE STRUCTURE
 
-### Events
+### Events  ==> has many: activities
 | id     | event_name       |
 |--------|------------------|
-|1       | WDI HK 7         |
+|1       | SPRING BREAK '11 |
 
 
-### Activities
+### Activities ==> belongs to: event  ==> has many: transactions
 |id     | event_id    | activity_name    | total_amount    |
 |-------|-------------|------------------|-----------------|
 |1      |1            |friday drinks     | $200            |
-|2      |1            |salad lunch       | $110            |
-|3      |nil          |nil               | $50             |
+|2      |1            |concert tickets   | $110            |
+|3      |nil          |rent              | $50             |
 
 
-### Transactions
+### Transactions ==> belongs to: event (what about payments...? together or separate?)
 |id     | activity_id | transaction_type | payer        |payee        | amount    |
 |-------|-------------|------------------|--------------|-------------|-----------|
 |1      | 1           | expense          | harrys_id    | dimples_id  | $100      |
@@ -37,12 +37,11 @@
 |3      | 2           | expense          | dimples_id   | harrys_id   | $10       |
 |4      | -           | payment          | fers_id      | dimples_id  | $50       |
 
-### Users (tbc)
+
+### Users (auto)
 |id             | username    | email            | password         |
 |---------------|-------------|------------------|------------------|
 |dimples_id     |dimple       |dy@dydydy.com     |3&63f#48DO2aw*(32r|
 |harrys_id      |harry        |harry@hahaha.com  |*(3wri3rpoifSDif3r|
 |fers_id        |f3r          |f3r@456.com       |(*F923rijpoeFDsfda|
 
-
-### Sessions (??)
