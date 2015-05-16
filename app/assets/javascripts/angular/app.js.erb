@@ -20,5 +20,9 @@ app.config(['$routeProvider',function($routeProvider) {
     when('/expenses', {
       templateUrl: "<%= asset_path('expenses/index.html') %>",
       controller: "ExpensesIndexCtrl"
+    }).
+    when('/new_expenses', {
+      templateUrl: "<%= asset_path('expenses/create.html') %>",
+      controller: "ExpensesCreateCtrl"
     })
 }])

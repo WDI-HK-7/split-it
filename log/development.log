@@ -14344,3 +14344,2060 @@ Processing by ExpensesController#index as HTML
   [1m[36mTransaction Load (0.6ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (1)[0m
   Rendered expenses/index.jbuilder (4.7ms)
 Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "expenses" ("expense_name", "total_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["expense_name", "Seafood Dinner"], ["total_amount", "100.0"], ["created_at", "2015-05-16 12:02:36.853479"], ["updated_at", "2015-05-16 12:02:36.853479"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36mExpense Load (0.7ms)[0m  [1mSELECT  "expenses".* FROM "expenses"  ORDER BY "expenses"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "transactions" ("amount", "expense_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", "60.0"], ["expense_id", 2], ["created_at", "2015-05-16 12:03:03.388125"], ["updated_at", "2015-05-16 12:03:03.388125"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-05-16 20:03:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.8ms)
+Completed 200 OK in 433ms (Views: 425.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular/app.self-983df76f6bef108bde6edd416425170ced49dd7220311a59e484bb0b3f684844.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:03:22 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:03:22 +0800
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mExpense Load (1.0ms)[0m  [1mSELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC[0m
+  [1m[35mTransaction Load (0.6ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)
+  Rendered expenses/index.jbuilder (31.2ms)
+Completed 200 OK in 69ms (Views: 32.9ms | ActiveRecord: 10.6ms)
+  [1m[36mTransaction Load (0.7ms)[0m  [1mSELECT  "transactions".* FROM "transactions"  ORDER BY "transactions"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for ::1 at 2015-05-16 20:06:06 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.1ms)
+Completed 200 OK in 545ms (Views: 544.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:06:06 +0800
+
+
+Started GET "/assets/angular/app.self-29c86c8168c3fad981ce2669d3892907d7e9b81d5e5aa7a6f5e6032d2a3386fb.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:06:07 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:06:07 +0800
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mExpense Load (0.5ms)[0m  SELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC
+  [1m[36mTransaction Load (0.8ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)[0m
+  Rendered expenses/index.jbuilder (4.9ms)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:09:05 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 531ms (Views: 530.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular/app.self-fb3f50d62780ecdcaab77ae1e573b98f6b67dcc55ac1ea63bbc78d8a64c2dc6c.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:09:06 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:09:06 +0800
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mExpense Load (0.5ms)[0m  [1mSELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC[0m
+  [1m[35mTransaction Load (0.4ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)
+  Rendered expenses/index.jbuilder (3.3ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:09:13 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 528ms (Views: 527.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular/app.self-bee0f27570f8df45d6fd97cf8618a8060645e8c96c648089e8f610684b54a227.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:09:14 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:09:14 +0800
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mExpense Load (0.4ms)[0m  SELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC
+  [1m[36mTransaction Load (0.4ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)[0m
+  Rendered expenses/index.jbuilder (3.5ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:09:32 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 513ms (Views: 512.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:09:32 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/angular/app.self-5cb9049cc12a1f853b6cc5d75af1ce5cd1b1e4057614c88475a27550a9b44458.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:09:33 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:09:33 +0800
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mExpense Load (0.5ms)[0m  [1mSELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC[0m
+  [1m[35mTransaction Load (0.5ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)
+  Rendered expenses/index.jbuilder (3.7ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:09:43 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 568ms (Views: 567.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular/app.self-4b6f0d39c88c6464ac5b96e5ac32b438c7239fcb0f08c84e7f6007e856b34a32.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:09:43 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:09:43 +0800
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mExpense Load (0.5ms)[0m  SELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC
+  [1m[36mTransaction Load (0.4ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)[0m
+  Rendered expenses/index.jbuilder (6.0ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:09:48 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 162ms (Views: 161.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/angular/app.self-4b6f0d39c88c6464ac5b96e5ac32b438c7239fcb0f08c84e7f6007e856b34a32.js?body=1" for ::1 at 2015-05-16 20:09:48 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:09:49 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:09:49 +0800
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mExpense Load (0.5ms)[0m  [1mSELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC[0m
+  [1m[35mTransaction Load (0.4ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)
+  Rendered expenses/index.jbuilder (3.3ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:09:57 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 532ms (Views: 531.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular/app.self-59d3b2d1c1c4f79ca71ab036a9b7d0d083295a78b8b9637159af2bb9825767a3.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:09:58 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:09:58 +0800
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mExpense Load (0.8ms)[0m  SELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC
+  [1m[36mTransaction Load (0.6ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)[0m
+  Rendered expenses/index.jbuilder (12.7ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:10:02 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 488ms (Views: 487.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular/app.self-014a5825591f2863cd99a3107975b20f4b51e0b7a7b19093a2f69c8d128531a1.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/assets/expenses/index-a949f1b0e64ae6c8c46794e909b23bcfbdefa37ad473f26db553885f30be65d0.html" for ::1 at 2015-05-16 20:10:02 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:10:02 +0800
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mExpense Load (0.7ms)[0m  [1mSELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC[0m
+  [1m[35mTransaction Load (0.4ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)
+  Rendered expenses/index.jbuilder (4.5ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:10:26 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.1ms)
+Completed 200 OK in 536ms (Views: 535.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:10:26 +0800
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:10:26 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:10:26 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular/app.self-7bf5301a0fb5f148f09527e732aa4c91a5e54cebf3b2bf68c59bb2411ff803f3.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/assets/expenses/index-b8608c79ab24425a3a3a7944e2abd6900dac9da708e9bf973f2c9c68d0bb9b6f.html" for ::1 at 2015-05-16 20:10:27 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:10:27 +0800
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mExpense Load (0.4ms)[0m  SELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC
+  [1m[36mTransaction Load (0.4ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)[0m
+  Rendered expenses/index.jbuilder (3.8ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:17:00 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 569ms (Views: 567.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular/app.self-cee5b35235b8880110356447e2d559c7682adc36be3ce0b7f3ff0c4a9576cf49.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/assets/expenses/index-b339aca34f7ed259fc2be40f1e3c15092de1d12577483a8e539fd05d711549f1.html" for ::1 at 2015-05-16 20:17:01 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:17:01 +0800
+Processing by ExpensesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mExpense Load (0.4ms)[0m  [1mSELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC[0m
+  [1m[35mTransaction Load (0.5ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)
+  Rendered expenses/index.jbuilder (15.6ms)
+Completed 200 OK in 41ms (Views: 17.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-16 20:19:16 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 590ms (Views: 589.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular/app.self-e8fb3e373669afb734378684de46b96d3cd230000c65e43f66049f25a1a6d9a0.js?body=1" for ::1 at 2015-05-16 20:19:16 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-2cf38d62b0d34603861ab57aae1dec4fa5fd054a490b014524b34f4bb82ec94d.js?body=1" for ::1 at 2015-05-16 20:19:16 +0800
+
+
+Started GET "/expenses" for ::1 at 2015-05-16 20:19:16 +0800
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mExpense Load (0.8ms)[0m  SELECT "expenses".* FROM "expenses"  ORDER BY "expenses"."created_at" DESC
+  [1m[36mTransaction Load (0.7ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."expense_id" IN (2, 1)[0m
+  Rendered expenses/index.jbuilder (6.4ms)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/expenses/create-5cf41e375ca9dccbce689670ffa50f681d82e7e09098584e60c224394d8194a8.html" for ::1 at 2015-05-16 20:19:21 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:19:43 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 584ms (Views: 583.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/app.self-b72bad1b2bb1df436b612689a21b2dfbd4ac0ba22fae5ec91ff70bd262bad23d.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-694df211d93c1770114c020568451bbf4fac19b5db286c33024ad4f547fabf57.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/assets/expenses/create-0f3bc179e2b51d95a37d063e13bbbc09300647207e57c7c95b1a2abd870e9087.html" for ::1 at 2015-05-16 20:19:44 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:19:57 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 538ms (Views: 537.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/app.self-b72bad1b2bb1df436b612689a21b2dfbd4ac0ba22fae5ec91ff70bd262bad23d.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-2b77ee1f1bad54c10da70aad33f46420555d365a11d206a8bd9e5a8d4965514f.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/assets/expenses/create-0f3bc179e2b51d95a37d063e13bbbc09300647207e57c7c95b1a2abd870e9087.html" for ::1 at 2015-05-16 20:19:57 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:20:26 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 543ms (Views: 542.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-0bd9d967f736e09f95757ddc6c122d89cb5ed273822b454cb43bb57b4849ab0f.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/app.self-b72bad1b2bb1df436b612689a21b2dfbd4ac0ba22fae5ec91ff70bd262bad23d.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/assets/expenses/create-0f3bc179e2b51d95a37d063e13bbbc09300647207e57c7c95b1a2abd870e9087.html" for ::1 at 2015-05-16 20:20:27 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:21:37 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 552ms (Views: 551.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/app.self-b72bad1b2bb1df436b612689a21b2dfbd4ac0ba22fae5ec91ff70bd262bad23d.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-cb45c5f57b6d6edb946d565658e2453d7ca96e738249cef28b355682444b98fd.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/assets/expenses/create-0f3bc179e2b51d95a37d063e13bbbc09300647207e57c7c95b1a2abd870e9087.html" for ::1 at 2015-05-16 20:21:38 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:22:01 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.1ms)
+Completed 200 OK in 520ms (Views: 519.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-72041aa51866f704255cd32f9b1b0970bdebd44fe4eac6bc9f07a96b915e5095.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/app.self-b72bad1b2bb1df436b612689a21b2dfbd4ac0ba22fae5ec91ff70bd262bad23d.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/assets/expenses/create-0f3bc179e2b51d95a37d063e13bbbc09300647207e57c7c95b1a2abd870e9087.html" for ::1 at 2015-05-16 20:22:02 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:22:48 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 551ms (Views: 550.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/app.self-9aaf23f07fed6328ee6faac48dea8c8e4473330eddd951b618f38ab8f488e7b8.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-72041aa51866f704255cd32f9b1b0970bdebd44fe4eac6bc9f07a96b915e5095.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/assets/expenses/create-fbe0d160bbc498046e8fdec9d061883b30ba37316d80b71c808e7c24c0e46340.html" for ::1 at 2015-05-16 20:22:49 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:23:12 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 527ms (Views: 526.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/app.self-ee8abcdca65278a18d667256b3a30cc70eeea54c48e260b5557a297e06004463.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-72041aa51866f704255cd32f9b1b0970bdebd44fe4eac6bc9f07a96b915e5095.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:23:12 +0800
+
+
+Started GET "/assets/expenses/create-657cc3458f3767b0a7bde86354ca5c6ff18a29707ebee28c5d334945c9585b38.html" for ::1 at 2015-05-16 20:23:13 +0800
+
+
+Started GET "/" for ::1 at 2015-05-16 20:23:21 +0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html within layouts/application (0.0ms)
+Completed 200 OK in 576ms (Views: 575.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/expenses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/application.self-fc83ed92417b533042f7f464f75463e2f65dcd27750cbd5f1d8621d159b0d327.css?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/transactions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/angular-route/angular-route.self-becab51333b5ae27fd15e5a6ba9cba25b9917a2a9c014b64afd99d17104ee44c.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/angular/app.self-2d99e529c34f7bc8d4c6c73cdb45af222a6aec7468c5ba00aa154e255d5b5a11.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-16 20:23:21 +0800
+
+
+Started GET "/assets/angular/controller/expenses/create.self-72041aa51866f704255cd32f9b1b0970bdebd44fe4eac6bc9f07a96b915e5095.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/angular/controller/expenses/index.self-f064c03ed4d63d8dc2a464dc8944c26bf8be4030964455687385262a3201ccb1.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/angular/controller/transactions/index.self-01c55c4621d3b41d837fd80d4c26f8fac77d65c422319b235df88b7c36cfdc9e.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/angular/controller/users/login.self-85623c562900bcd881f22540232d15a0467de024f03a1038b1b31237cd812294.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/angular/controller/users/signup.self-dfce4b12ec43369c262fa74ab3f36aeeb74b0ea62ff99e4951edd21e2b64b073.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/expenses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/transactions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started GET "/assets/expenses/create-174737ccbfb9b031579087c46abea3dd543418e276b2f848ce47f73c124d8d15.html" for ::1 at 2015-05-16 20:23:22 +0800
+
+
+Started POST "/expenses" for ::1 at 2015-05-16 20:23:39 +0800
+Processing by ExpensesController#create as HTML
+  Parameters: {"expense"=>{"expense_name"=>"Rent", "total_amount"=>"$10,000"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "expenses" ("expense_name", "total_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["expense_name", "Rent"], ["total_amount", "0.0"], ["created_at", "2015-05-16 12:23:39.688789"], ["updated_at", "2015-05-16 12:23:39.688789"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/expenses" for ::1 at 2015-05-16 20:25:38 +0800
+Processing by ExpensesController#create as HTML
+  Parameters: {"expense"=>{"expense_name"=>"Parking", "total_amount"=>"60"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "expenses" ("expense_name", "total_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["expense_name", "Parking"], ["total_amount", "60.0"], ["created_at", "2015-05-16 12:25:38.711028"], ["updated_at", "2015-05-16 12:25:38.711028"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.9ms)

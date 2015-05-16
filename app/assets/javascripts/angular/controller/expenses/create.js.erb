@@ -1,0 +1,19 @@
+app.controller('ExpensesCreateCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+  console.log("ExpensesCreateCtrl Is Working!")
+
+  $scope.form = {};
+  $scope.expense = {};
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  var expense_data = {
+    expense: $scope.expense
+  }
+
+  $scope.form.create = function() {
+    $http.post(url + 'expenses', expense_data).success(function(response) {
+      console.log(response);
+    })
+  }
+
+}])
