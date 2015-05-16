@@ -5,5 +5,14 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  #homepage
+  root 'static_pages#index'
+
+  #CRUD for transactions
+  resources :transactions, :only => [:create, :index, :destroy, :update]
+
+  #CRUD for expenses
+  resources :expenses, :only => [:create, :index, :destroy, :update]
+
 
 end

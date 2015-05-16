@@ -1,0 +1,22 @@
+app.controller('SignupCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+  console.log("SignupCtrl working")
+  $scope.form = {};
+  $scope.user = {};
+
+  // when you submit stuff
+  $scope.form.signup = function() {
+    console.log($scope.user);
+    
+    var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+    
+    var data = {
+      user: $scope.user
+    };
+
+    $http.post(url + "users", data).success(function(response) {
+      console.log(response);
+    })
+  }
+
+
+}])

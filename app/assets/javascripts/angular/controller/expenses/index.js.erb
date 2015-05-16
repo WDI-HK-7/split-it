@@ -1,0 +1,10 @@
+app.controller('ExpensesIndexCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+  console.log("This ExpensesIndexCtrl is working");
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  $http.get(url + 'expenses').success(function(response) {
+    $scope.expenses = response;
+  })
+  
+}]);

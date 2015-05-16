@@ -1,0 +1,10 @@
+app.controller('TransactionsIndexCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+  console.log("This TransactionsIndexCtrl is working");
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  $http.get(url + 'transactions').success(function(response) {
+    $scope.transactions = response;
+  })
+  
+}]);

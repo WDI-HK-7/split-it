@@ -8,7 +8,7 @@
 | transactions  | GET*           | /transactions?payee=current_user && /transactions?payer=current_user  | get all transactions  | transactions#index  | renders transactions, else false     |
 | transactions  | POST*          | /transactions                                                         | create a transaction  | transactions#create | on success: true, else false         |
 | transaction   | DELETE         | /transactions/:id                                                     | delete a transaction  | transactions#delete | on success: true, else false         |
-| expenses      | GET*           |                                                                       | get all expenses      | expenses#index      | renders expenses, else false         |
+| expenses      | GET*           | /expenses                                                             | get all expenses      | expenses#index      | renders expenses, else false         |
 | expense       | DELETE         | /expenses/:id                                                         | delete an expense     | expense#delete      | on success: true, else false         |
 | settlements   | GET*           | /settlements?payee=current_user && /settlements?payer=current_user    | get all settlements   | settlements#index   | renders settlements, else false      |
 | settlements   | POST*          | /settlements                                                          | create a settlement   | settlements#create  | on success: true, else false         |

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1>Sign Up</h1>
+
+    <form ng-submit="form.signup()">
+      <input type="email" class="form form-control" placeholder="Email" ng-model="user.email">
+      <input type="text" class="form form-control" placeholder="Full Name" ng-model="user.fullname">
+      <input type="password" class="form form-control" placeholder="Password" ng-model="user.password">
+      <input type="password" class="form form-control" placeholder="Password Confirmation" ng-model="user.password_confirmation">
+      <input type="submit">
+    </form>
+</div>

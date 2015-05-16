@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+
+  <h1>Log Of Expenses</h1>
+
+  <section class="col-xs-4, col-xs-off-set-4">
+  <div ng-repeat = "expense in expenses track by $index">
+    <div class="page-header">
+      <h3>{{ expense.expense_name }}
+      <small>${{ expense.total_amount }}</small></h3>
+    </div>
+    <ul class="list-group">
+      <li ng-repeat="transaction in expense.transactions">
+        Amount Owed: ${{ transaction.amount }}
+      </li>
+    </ul>
+
+
+  </div>
+</section>
+
+  </div>
+</div>

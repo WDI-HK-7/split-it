@@ -1,0 +1,19 @@
+app.controller('LoginCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+  console.log("This LoginCtrl is working");
+
+  $scope.form = {};
+  $scope.user = {};
+  
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  $scope.form.login = function() {
+    var data = {
+      user: $scope.user
+    }
+
+    $http.post(url + "users/sign_in", data).success(function(response) {
+      console.log(response);
+    })
+  }
+  
+}]);
