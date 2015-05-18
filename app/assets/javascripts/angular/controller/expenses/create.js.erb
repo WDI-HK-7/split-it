@@ -16,7 +16,8 @@ app.controller('ExpensesCreateCtrl', ['$scope', '$http', '$location', function($
         expense_name: $scope.expense.expense_name
       },
       transaction: {
-        amount: $scope.transaction.amount
+        amount: $scope.transaction.amount,
+        payee_id: $scope.transaction.payee
       }
     }
     

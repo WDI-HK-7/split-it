@@ -11,6 +11,7 @@ class ExpensesController < ApplicationController
     # Expense.transaction do
       if @expense.save
         @transaction = @expense.transactions.new(transaction_params)
+        @transaction.payer = current_user
 
         if @transaction.save
         render :json => { message: "saved", status: true }
@@ -28,7 +29,7 @@ class ExpensesController < ApplicationController
   end
 
   def transaction_params
-    params.require(:transaction).permit(:amount)
+    params.require(:transaction).permit(:amount, :payee_id)
   end
 
 end
