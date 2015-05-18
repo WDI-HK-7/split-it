@@ -6,7 +6,7 @@ Never forget another who-owes-what again!
 
 To-Do:
 
-* ~~Wire Frame~~ (https://goo.gl/4d3NKD) (to be reviewed)
+* ~~Wire Frame~~ 
 
 * ~~Create new rails app with events & transactions databases~~ (to be reviewed)
 
