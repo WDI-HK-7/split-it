@@ -6,18 +6,20 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(post_params)
-    if @transaction.save
-      render :json => { message: "saved" }
-    else
-      render :json => { message: "not saved" }
+    transaction_params.each do |params|
+      @transaction = Transaction.new(params)
+      if @transaction.save
+        render :json => { message: "saved" }
+      else
+        render :json => { message: "not saved" }
+      end
     end
   end
 
   private
 
-  def post_params
-    params.require(:transaction).permit(:amount, :expense_id)
+  def transaction_params
+    params.require(:transaction).permit(:payee, :payer, :amount, :expense_id)
   end
 
 end

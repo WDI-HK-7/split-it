@@ -3,28 +3,26 @@ app.controller('ExpensesCreateCtrl', ['$scope', '$http', '$location', function($
 
   $scope.form = {};
   $scope.expense = {};
-  $scope.transaction = {};
+  $scope.transactions = [];
 
   var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
 
-
-
   $scope.form.create = function() {
     var expense_data = {
-      expense: {
-        total_amount: $scope.expense.total_amount,
-        expense_name: $scope.expense.expense_name
-      },
-      transaction: {
-        amount: $scope.transaction.amount,
-        payee_id: $scope.transaction.payee
-      }
+      expense: $scope.expense
     }
     
     $http.post(url + 'expenses', expense_data).success(function(response) {
-      console.log(response);
-    })
+      console.log(response.expense_id)
 
+      $http.post(url + 'expenses/' + response.expense_id + '/transactions', $scope.transactions).success(function(response) {
+        console.log(response)
+      })
+    })
+  }
+
+  $scope.addTx = function() {
+    $scope.transactions.push({});
   }
 
 }])

@@ -8,28 +8,17 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
 
-    # Expense.transaction do
-      if @expense.save
-        @transaction = @expense.transactions.new(transaction_params)
-        @transaction.payer = current_user
-
-        if @transaction.save
-        render :json => { message: "saved", status: true }
-        else
-        render :json => { message: "not saved", status: false }
-        end
-      end
-    # end
+    if @expense.save
+      render :json => { expense_id: @expense.id, message: "saved", status: true }
+    else
+      render :json => { message: "not saved", status: false }
+    end
   end
 
   private
 
   def expense_params
     params.require(:expense).permit(:expense_name, :total_amount)
-  end
-
-  def transaction_params
-    params.require(:transaction).permit(:amount, :payee_id)
   end
 
 end
