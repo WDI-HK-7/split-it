@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+  <h1>Create An Expense</h1>
+
+    <form ng-submit="form.create()">
+      <input placeholder="Expense Name" class="form form-control" ng-model="expense.expense_name">
+      <input placeholder="Total Amount" class="form form-control" ng-model="expense.total_amount">
+      <br>
+      <p>Who Should Pay?</p>
+
+      <div ng-repeat="tx in transactions">
+        <input type="text" ng-model="tx.payee" placeholder="Payee ID">
+        <input ng-model="tx.amount" placeholder="Amount">
+      </div>
+      <button ng-click="addTx()">Add Debts</button>
+ 
+      <br>
+      <br>
+      <input type="submit" class="btn btn-default">
+    </form>
+
+  </div>
+</div>

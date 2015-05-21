@@ -6,5 +6,9 @@ app.controller('ExpensesIndexCtrl', ['$scope', '$http', '$location', function($s
   $http.get(url + 'expenses').success(function(response) {
     $scope.expenses = response;
   })
+
+  $scope.redirect = function() {
+    $location.path('new_expenses');
+  }
   
 }]);

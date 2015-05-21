@@ -9,6 +9,7 @@
 | transactions  | POST*          | /transactions                                                         | create a transaction  | transactions#create | on success: true, else false         |
 | transaction   | DELETE         | /transactions/:id                                                     | delete a transaction  | transactions#delete | on success: true, else false         |
 | expenses      | GET*           | /expenses                                                             | get all expenses      | expenses#index      | renders expenses, else false         |
+| expenses      | POST*          | /expenses                                                             | create an expense     | expenses#create     | on success: true, else false         |
 | expense       | DELETE         | /expenses/:id                                                         | delete an expense     | expense#delete      | on success: true, else false         |
 | settlements   | GET*           | /settlements?payee=current_user && /settlements?payer=current_user    | get all settlements   | settlements#index   | renders settlements, else false      |
 | settlements   | POST*          | /settlements                                                          | create a settlement   | settlements#create  | on success: true, else false         |
@@ -24,16 +25,7 @@
 |2       | dimple           |                 |                   |
 
 
-###UserTransactions ==> belongs_to: users & transactions
-|id       | user_id        | transaction_id    |
-|---------|----------------|-------------------|
-|1        | 1              | 1                 |
-|2        | 2              | 1                 |
-|3        | 2              | 3                 |
-|4        | 3              | 3                 |     
-
-
-### Transactions ==> has_many: users (two) & belongs_to: expense
+### Transactions ==> belongs_to: two users & belongs_to: expense
 |id     | expense_id      | payer        | payee       | amount    |
 |-------|-----------------|--------------|-------------|-----------| 
 |1      | 1               | harrys_id    | dimples_id  | $100      |
@@ -49,8 +41,8 @@
 |2      |concert tix      | $100            |
 
 
-### Settlements  ==> has_many: users (two)
+### Settlements  ==> belongs_to: two users
 |id     | payer        | payee       | amount    |
 |-------|--------------|-------------|-----------|
-|1      | 1            | 2           | $100      |
+|1      | harry_id     | dimples_id  | $100      |
 

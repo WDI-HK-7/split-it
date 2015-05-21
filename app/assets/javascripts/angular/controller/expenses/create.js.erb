@@ -1,0 +1,28 @@
+app.controller('ExpensesCreateCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+  console.log("ExpensesCreateCtrl Is Working!")
+
+  $scope.form = {};
+  $scope.expense = {};
+  $scope.transactions = [];
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000/";
+
+  $scope.form.create = function() {
+    var expense_data = {
+      expense: $scope.expense
+    }
+    
+    $http.post(url + 'expenses', expense_data).success(function(response) {
+      console.log(response.expense_id)
+
+      $http.post(url + 'expenses/' + response.expense_id + '/transactions', $scope.transactions).success(function(response) {
+        console.log(response)
+      })
+    })
+  }
+
+  $scope.addTx = function() {
+    $scope.transactions.push({});
+  }
+
+}])
